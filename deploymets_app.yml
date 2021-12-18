@@ -15,7 +15,7 @@ spec:
         app:  api-app
     spec:
       containers:
-      - image:  jeanbsp/apicrud:1.0.0
+      - image:  jeanbsp/apicrud:1.0.1
         name:  api-app
         resources:
           requests:
@@ -27,6 +27,19 @@ spec:
         ports:
         - containerPort:  5000
           name:  api-app
+      containers:
+      - image:  mysql:5.7
+        name:  DB
+        resources:
+          requests:
+            cpu: "20m"
+            memory: "55M"
+        env:
+        - name:  ENVVARNAME
+          value:  ENVVARVALUE       
+        ports:
+        - containerPort:  3306
+          name:  BD   
 ---
 apiVersion: v1
 kind: Service
