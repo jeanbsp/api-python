@@ -1,0 +1,4 @@
+api==0.0.7
+fastapi==0.70.1
+fastapi-crudrouter==0.8.4
+uvicorn==0.16.0
