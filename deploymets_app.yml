@@ -27,7 +27,7 @@ spec:
         ports:
         - containerPort:  5000
           name:  api-app
-      containers:
+      
       - image:  mysql:5.7
         name:  DB
         resources:
@@ -38,7 +38,7 @@ spec:
         - name:  ENVVARNAME
           value:  ENVVARVALUE       
         ports:
-        - containerPort:  3306
+        - containerPort:  33066
           name:  BD   
 ---
 apiVersion: v1
